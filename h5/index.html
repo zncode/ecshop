@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<!--[if IE]>
+<html class="ie" lang="en" data-ng-app="app">
+<![endif]-->
+<!--[if IE 6]>
+<html class="ie ie6" lang="en" data-ng-app="app">
+<![endif]-->
+<!--[if IE 7]>
+<html class="ie ie7" lang="en" data-ng-app="app">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en" data-ng-app="app">
+<![endif]-->
+<!--[if gte IE 9]>
+<html class="ie ie9" lang="en" data-ng-app="app">
+<![endif]-->
+<!--[if !IE]> -->
+<html class="" lang="en" data-ng-app="app">
+<!-- <![endif]-->
+
+<head>
+  <meta charset="utf-8" />
+  <title>ECShop</title>
+
+  <meta name="description" content="ECShop" />
+  <meta name="keywords" content="ECShop" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="yes" name="apple-touch-fullscreen">
+  <meta content="telephone=no,email=no" name="format-detection">
+
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="expires" content="0">
+  <meta name="applicable-device" content="mobile">
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Access-Control-Allow-Origin" content="*">
+
+  <link rel="apple-touch-icon-precomposed" href="image/apple-touch-icon.png">
+  <link rel="apple-touch-icon" href="image/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="image/icon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="image/icon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="image/icon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="image/icon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="image/icon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="image/icon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="image/icon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="image/icon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="image/icon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="image/icon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="image/icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="image/icon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="image/icon/favicon-16x16.png">
+  <link rel="manifest" href="image/icon/manifest.json">
+
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" href="css/app-f073459722.min.css">
+
+  <script type="text/javascript">
+    var GLOBAL_CONFIG = {};
+  </script>
+  <script src="config/config.app.js?v=1481909840691"></script>
+
+</head>
+
+<body id="ng-app"
+      ng-controller="AppController"
+      ng-class="{'is-ie': app.useragent.isIE,
+                 'is-weixin': app.useragent.isWeixin,
+                 'is-mobile': app.useragent.isMobile,
+                 'is-browser': app.useragent.isBrowser}">
+
+  <toast></toast>
+
+  <div class="app" id="app" ui-view>
+  </div>
+
+  <div class="splash" id="splash">
+    <div class="inner">
+      <img src="image/loading.png"/>
+    </div>
+  </div>
+
+  <script src="js/app-cca7c10393.angular.js"></script>
+
+  <script type="text/javascript">
+    $(window).load(function(){
+      var el = $('#splash');
+      el.fadeOut(500, function(){
+        el.remove();
+      });
+    })
+  </script>
+
+</body>
+</html>
